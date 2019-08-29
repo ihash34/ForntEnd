@@ -1,0 +1,275 @@
+/*
+Pimary color   Background
+Accent color   Sidebar - dash board active tab - inner tab
+Menu           top menu
+button         menu item active - inner sub tab text (Appraisal)  -button     (Gradiant) - 
+link           herf (Texual)
+
+Accent color  #c91c1d
+primary color  #292929
+
+*/
+body {
+  background: linear-gradient(0deg, #312b2d 0%, #161314 100%);
+  margin: 0px;
+  font-size: 12px;
+}
+.navbar {
+  margin-top: 25px;
+  background-color: #1b1819;
+  height: 39px;
+  vertical-align: center;
+}
+nav {
+  font-size: 14;
+  padding-left: 20%;
+  background-color: #363032;
+  height: 21.5px;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navbar li {
+  float: left;
+}
+.navbar li a:hover {
+  background: linear-gradient(183.87deg, #e64c4c 0%, #c91c1d 100%);
+}
+.navbar li a {
+  block-size: 25px;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 15px;
+  padding-right: 7px;
+  padding-left: 7px;
+  text-decoration-line: none;
+}
+.dashboard {
+  width: 798px;
+  margin-left: 270px;
+  margin-top: 49px;
+  height: 728px;
+  background: #ffffff;
+  padding-top: 0px;
+}
+hr {
+  display: block;
+  padding: 0;
+  position: relative;
+  margin: 0px;
+  width: 786px;
+  background-color: #c91c1d;
+}
+.InnerBarTab {
+  border-top: #c91c1d solid 7px;
+  padding-left: 10px;
+  background: #ffffff;
+  height: 38px;
+  border-bottom: #c91c1d solid 2px;
+}
+.DashBoardInnerBarHighLight {
+  float: left;
+  width: 100%;
+  height: 1px ;
+  background: #c91c1d;
+  margin: 0px;
+  padding: 0px;
+}
+.DashboardInnerBarTab {
+  margin-top: 10px;
+  float: left;
+  border-block-start: 8px;
+  margin-right: 1px;
+  margin-bottom: 10px;
+  padding: 5px 9px 4px 9px;
+  color: black;
+}
+.helpIcon {
+  height: 21px;
+  width: 21px;
+  float: right;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background-color: #c91c1d;
+  line-height: 180%;
+  border-radius: 100%;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+}
+.DashboardInnerBarTab:hover {
+  border-bottom: #c91c1d solid 6px;
+  border-block-start: 8px;
+  margin-right: 1px;
+  margin-bottom: 10px;
+  float: left;
+  color: #c91c1d;
+  padding: 5px 9px 4px 9px;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+.DashboardTopBarTabHolder {
+  margin-top: 26px;
+}
+.DashboardTopBarTabCurrent,
+.DashboardTopBarTabCurrent:hover {
+  margin-right: 1px;
+  margin-top: 0px;
+  background: #c91c1d;
+  float: left;
+  color: #ffffff;
+  padding: 5px 9px 5px 9px;
+  border-top-left-radius: 15px;
+  margin-top: 4px;
+}
+.DashboardTopBarTab {
+  background: #f9f9f9;
+  margin-right: 1px;
+  margin-top: 4px;
+  background: linear-gradient(top, #f9f9f9 0%, #d4d3d3 100%);
+  float: left;
+  color: #212121;
+  padding: 4px 9px 4px 9px;
+}
+.DashboardTopBarTab:hover {
+  margin-right: 1px;
+  margin-top: 0px;
+  background: linear-gradient(0deg, #e64c4c 0%, #c91c1d 100%);
+  color: #ffffff;
+  float: left;
+  cursor: pointer;
+  padding: 4px 9px 4px 9px;
+  margin-top: 4px;
+}
+.NotesTopBarTabCurrent,
+.NotesTopBarTabCurrent:hover {
+  cursor: pointer;
+  margin-right: 1px;
+  margin-top: 0px;
+  float: left;
+  background: linear-gradient(0deg, #e64c4c 0%, #c91c1d 100%);
+  color: #ffffff;
+  padding: 4px 9px 4px 9px;
+  border-top-right-radius: 15px;
+  margin-top: 4px;
+}
+.NotesTopBarTab {
+  background: #f9f9f9;
+  margin-right: 1px;
+  margin-top: 4px;
+  background: linear-gradient(top, #f9f9f9 1%, #d4d3d3 100%);
+  float: left;
+  color: #212121;
+  padding: 4px 9px 4px 9px;
+  border-top-right-radius: 15px;
+}
+.NotesTopBarTab:hover {
+  cursor: pointer;
+  margin-right: 1px;
+  margin-top: 0px;
+  float: left;
+  background: linear-gradient(0deg, #e64c4c 0%, #c91c1d 100%);
+  color: #ffffff;
+  padding: 4px 9px 4px 9px;
+  border-top-right-radius: 15px;
+  margin-top: 4px;
+}
+.dashboardlftPanel {
+  font-family: Helvetica;
+  background: #3f3639;
+  float: left;
+  margin-left: 117px ;
+  margin-top: 55px;
+  background-position-x: 20px;
+}
+.profile {
+  background: linear-gradient(-51.91deg, #df1f20 100%, #c91c1d 50%);
+  width: 153px;
+  margin-bottom: 0px;
+  padding-bottom: 0.1px;
+}
+.profile img {
+  margin: 20px;
+  margin-bottom: 0px;
+  width: 113.871px;
+  justify-content: flex-start;
+}
+.profile p {
+  margin-top: 10px;
+  margin-left: 20%;
+  color: #ffffff;
+  font-size: 19px;
+  justify-content: center;
+}
+.SocialPanel {
+  margin-top: 0px;
+  justify-content: flex-start;
+  color: #ffffff;
+  background: #161314;
+  height: 62px;
+  width: 153px;
+  text-align: left;
+}
+.SocialPanelFeedBack {
+  padding: 0px;
+  text-align: center;
+  margin-left: 11px;
+  margin-right: 11px;
+  margin-top: 2px;
+  width: 25px;
+  height: 60px ;
+  float: left;
+}
+.friends {
+  float: left;
+  background: linear-gradient(-51.91deg, #e64c4c 0%, #c91c1d 30%);
+  color: #ffffff;
+  width: 153px;
+  height: 95;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  padding-top: 0.1px;
+}
+#friendsTop {
+  height: 17px;
+  width: 151px;
+  margin-top: 0px;
+  margin-left: 2px;
+}
+.friends div {
+  width: 105px;
+  height: 34px;
+}
+.friendsRow {
+  float: left;
+  margin-left: 10px ;
+  margin-bottom: 5px;
+  width: 153px;
+}
+.friendsRow img {
+  width: 34px;
+  height: 34px;
+  padding-right: 1px;
+}
+.lftPanelDiscription {
+  width: 153px;
+  height: 469px;
+}
+.op1 {
+  cursor: pointer;
+  float: right;
+  width: 157px;
+  height: 40px;
+  text-align: center;
+  background: linear-gradient(-51.91deg, #e33536 0%, #c91c1d 100%, #e33536 100%);
+  font-size: 10pt;
+  color: #ffffff;
+  margin-top: 5px;
+  line-height: 260%;
+}
