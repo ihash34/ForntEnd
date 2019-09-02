@@ -9,18 +9,24 @@ Accent color  #c91c1d
 primary color  #292929
 
 */
+.container {
+  width: device-width;
+  margin: 0%;
+}
 body {
   background: linear-gradient(0deg, #312b2d 0%, #161314 100%);
   margin: 0px;
   font-size: 12px;
 }
 .navbar {
+  overflow: hidden;
   margin-top: 25px;
   background-color: #1b1819;
   height: 39px;
   vertical-align: center;
 }
 nav {
+  width: device-width;
   font-size: 14;
   padding-left: 20%;
   background-color: #363032;
@@ -49,12 +55,12 @@ nav {
   text-decoration-line: none;
 }
 .dashboard {
-  width: 798px;
-  margin-left: 270px;
-  margin-top: 49px;
+  width: device-width;
+  margin-left: 153px;
+  margin-top: 20px;
   height: 728px;
   background: #ffffff;
-  padding-top: 0px;
+  padding: 0px;
 }
 hr {
   display: block;
@@ -62,28 +68,23 @@ hr {
   position: relative;
   margin: 0px;
   width: 786px;
-  background-color: #c91c1d;
+  border-top: #c91c1d solid 7px;
 }
 .InnerBarTab {
+  width: 100%;
+  float: left;
   border-top: #c91c1d solid 7px;
-  padding-left: 10px;
   background: #ffffff;
   height: 38px;
+  margin: 0px;
   border-bottom: #c91c1d solid 2px;
 }
-.DashBoardInnerBarHighLight {
-  float: left;
-  width: 100%;
-  height: 1px ;
-  background: #c91c1d;
-  margin: 0px;
-  padding: 0px;
-}
 .DashboardInnerBarTab {
+  overflow: hidden;
   margin-top: 10px;
   float: left;
   border-block-start: 8px;
-  margin-right: 1px;
+  margin-right: 0px;
   margin-bottom: 10px;
   padding: 5px 9px 4px 9px;
   color: black;
@@ -104,7 +105,11 @@ hr {
   text-align: center;
   text-decoration: none;
 }
+.InnerBarTab {
+  overflow: hidden;
+}
 .DashboardInnerBarTab:hover {
+  overflow: hidden;
   border-bottom: #c91c1d solid 6px;
   border-block-start: 8px;
   margin-right: 1px;
@@ -115,18 +120,18 @@ hr {
 }
 /*--------------------------------------------------------------------------------------------------------------------------------*/
 .DashboardTopBarTabHolder {
-  margin-top: 26px;
+  margin-top: 0px;
+  height: 6px;
 }
 .DashboardTopBarTabCurrent,
 .DashboardTopBarTabCurrent:hover {
   margin-right: 1px;
-  margin-top: 0px;
   background: #c91c1d;
   float: left;
   color: #ffffff;
   padding: 5px 9px 5px 9px;
   border-top-left-radius: 15px;
-  margin-top: 4px;
+  margin-top: 3px;
 }
 .DashboardTopBarTab {
   background: #f9f9f9;
@@ -184,8 +189,8 @@ hr {
   font-family: Helvetica;
   background: #3f3639;
   float: left;
-  margin-left: 117px ;
-  margin-top: 55px;
+  margin-left: 0px ;
+  margin-top: 34px;
   background-position-x: 20px;
 }
 .profile {
