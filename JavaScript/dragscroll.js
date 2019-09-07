@@ -1,4 +1,5 @@
-/**
+
+  /**
  * @fileoverview dragscroll - scroll area by dragging
  * @version 0.0.8
  * 
