@@ -31,6 +31,8 @@ body
     margin: 0px;
     font-size: 12px;
 }
+
+///////////////////////////// N A V B A R ////////////////////////////////////////
 .navbar
 {  overflow: auto;
     white-space: nowrap;
@@ -40,7 +42,6 @@ body
     
 
     margin-top:25px; 
-    overflow-y: hidden; 
     background-color: @menu-color;
     height: 39px;
     vertical-align: center;
@@ -79,34 +80,14 @@ body
  
 }
 
-// nav
-// {   
-//     width: device-width;  
-//     font-size:14;
-//     padding-left: 20%;
-//     background-color:lighten(@menu-color,10%) ;
-//     height: 21.5px;
-   
-// }
-// .navbar ul
-// { 
-//   list-style-type: none;
-//   margin: 0;
-//   padding: 0;
-  
-// } 
-// .navbar li{
-   
-//   float: left;
-// }
 
 
-
+////////////////////////////////////////////////////
 .dashboard
 { 
     width: device-width;
-    margin-left:153px;
-    margin-top:20px; 
+    margin-left:35px;
+ //   margin-top:21px; 
     height: 728px;
     background:#ffffff;
     padding: 0px; 
@@ -139,16 +120,7 @@ hr
     border-bottom:@Accent-color solid 2px;   
 
 }
-// .DashBoardInnerBarHighLight
-// {
-//     float: left;
-//     width: 100%;
-//     height:1px ;
-//     background:@Accent-color;
-//     margin:0px;
-//     padding:0px;
-  
-// }
+
 
 .DashboardInnerBarTab
 { 
@@ -207,11 +179,16 @@ hr
 /*--------------------------------------------------------------------------------------------------------------------------------*/
 
 .DashboardTopBarTabHolder
-{   
-    
-    margin-top: 0px;
-    height: 6px;
-   
+{    display: inline-block;
+    overflow-x: auto;
+   white-space: nowrap;
+    overflow-y: hidden; 
+
+    margin-left: 35px;
+   // margin-top: 1px;
+    //height: 6px;
+    height: 25px;
+    margin-bottom: 0px;
 }
 
 .DashboardTopBarTabCurrent, .DashboardTopBarTabCurrent:hover 
@@ -239,6 +216,7 @@ hr
         
 }
 
+
 .DashboardTopBarTab:hover
 {
     margin-right: 1px;
@@ -250,6 +228,20 @@ hr
     padding:4px 9px 4px 9px;
     margin-top: 4px;
 }
+.DashboardTopBarTab::-webkit-scrollbar {
+    height: 5px;
+   display: none;
+     background-color: rgba(245, 245, 245, 0);
+ } 
+ .DashboardTopBarTab::-webkit-scrollbar-thumb {
+     background-color: #000000;
+     max-height:5px;
+ }
+ .DashboardTopBarTab::-webkit-scrollbar-track {
+     
+     background-color: #F5F5F5;
+     height:2px;
+ }
 
 .NotesTopBarTabCurrent, .NotesTopBarTabCurrent:hover 
 {
@@ -289,117 +281,154 @@ hr
     border-top-right-radius: 15px;
     margin-top: 4px;
 }
+/*-----------------------------------------------------------------------------------------------------------*/
 
-.dashboardlftPanel
-{
-    font-family: Helvetica;
-    background : lighten(@primary-color,15%);
-    float: left; 
-    margin-left:0px ; 
-    margin-top:34px;  
-    background-position-x: 20px;
-    
-}
-.profile
-{
-     background : linear-gradient(-51.91deg,lighten(@Accent-color,5%) 100%, @Accent-color 50%,);
-    width: 153px; 
-  
-    margin-bottom: 0px;
-    padding-bottom: 0.1px;
-}
-.profile img
-{
-    margin:20px; 
-    margin-bottom: 0px;
-    width: 113.871px; 
-   
-    justify-content: flex-start;
-
-
-}
-.profile p
-{   margin-top: 10px;
-    
-    margin-left: 20%;
-    color:contrast(@Accent-color,darken(@Accent-color,100%),lighten(@Accent-color,100%),50%);
-    font-size:19px;
-    
-    justify-content: center;
-    
-}
-.SocialPanel 
-{  margin-top: 0px;
-    
-    justify-content: flex-start;
-    color:contrast(@primary-color,darken(@primary-color,100%),lighten(@primary-color,100%),50%);
-    background : @primary-color;
-    height: 62px; width: 153px;
-    text-align: left;
-  
-    
-
-}
-.SocialPanelFeedBack
-{  padding: 0px;
-    text-align:center;
-
-    margin-left: 11px;
-    margin-right: 11px;
-    margin-top: 2px;
-    width: 25px; height:60px ; float: left;
-}
-
-.friends
-{ float: left;
-  
-  background : linear-gradient(-51.91deg, lighten(@Accent-color,15%) 0%,@Accent-color 30%,);
-  color:contrast(@Accent-color,darken(@Accent-color,100%),lighten(@Accent-color,100%),50%);
-  width: 153px; 
-    height: 95;  
-    margin-top: 1px;
-    margin-bottom: 0px;
-    padding-top: 0.1px;
-    
-}
-#friendsTop 
-{ 
-    height: 17px;
-    width: 151px;
-    margin-top: 0px;
-    margin-left: 2px;
- }
-.friends div 
-{ width: 105px; height: 34px; }
-.friendsRow
-{   float:left; margin-left: 10px ;margin-bottom: 5px; width: 153px;}
-.friendsRow  img
-{width: 34px; height: 34px;
-  padding-right: 1px;
-
+.menu {
+    border-top-right-radius:20px ;
+     border-bottom-right-radius:20px ;
+    margin-top:10%;
+      // margin-bottom:5%;
+   font-weight: 100;
+   background: @Accent-color;
+   width: 150px;
+   height: 20%;
+   padding-right: 50px;
+   position: fixed;
+   z-index: 100;
+   -webkit-box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+   box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+   left: -165px;
+   transition: all .3s;
+   -webkit-transition: all .3s;
+   color: #fff;
    
 }
-.lftPanelDiscription{
-    
-    width:153px;
-    height: 469px;
-   
+
+.menu:hover,
+.menu:focus {
+   transform: translate3d(150px, 0, 0);
+   animation-timing-function: 1s ease-in
 }
-.op1
-{   cursor: pointer;
-    float: right;
-    width:157px;
-    height: 40px;
-   // background :darken(@Accent-color,4%);
-    text-align: center;
-   background: linear-gradient(-51.91deg, lighten(@Accent-color,10%) 0%,@Accent-color 100%,lighten(@Accent-color,10%) 100%);
-    font-size:10pt; 
-    color:contrast(@Accent-color,darken(@Accent-color,100%),lighten(@Accent-color,100%),50%);
-    margin-top:5px;
-   line-height: 260%;
-  //  padding: 10px,10px,10px,10px;
-   // box-sizing:border-box;
-    //box-shadow:0px 1px #444444;
+
+.menu .title {
+   top: 50%;
+   position: absolute;
+   
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+   transform: rotate(270deg);
+Right: 1px;
+   font-weight: 800;
+   font-size: 15px
+}
+
+.menu .nav {
+   position: fixed;
+   top: 10%;
+  
+   //-webkit-transform: translateY(-50%);
+  // -ms-transform: translateY(-50%);
+   transform: translateY(-35%);
+   font-weight: 100
+}
+
+
+.dashboardlftPanel {
+ font-family: Helvetica;
+ background: #3f3639;
+ float: left;
+ margin-left: 10px ;
+ margin-right: 10px ;
+ background-position-x: 150px;
+}
+.profile {
+ background: linear-gradient(-51.91deg, #df1f20 100%, #c91c1d 50%);
+ width: 153px;
+ margin-bottom: 0px;
+ padding-bottom: 0.1px;
+}
+.profile img {
+ margin: 20px;
+ margin-bottom: 0px;
+ width: 113.871px;
+ justify-content: flex-start;
+}
+.profile p {
+ margin-top: 10px;
+ margin-left: 20%;
+ color: #ffffff;
+ font-size: 19px;
+ justify-content: center;
+}
+.SocialPanel {
+ margin-top: 0px;
+ justify-content: flex-start;
+ color: #ffffff;
+ background: #161314;
+ height: 62px;
+ width: 153px;
+ text-align: left;
+}
+.SocialPanelFeedBack {
+ padding: 0px;
+ text-align: center;
+ margin-left: 11px;
+ margin-right: 11px;
+ margin-top: 2px;
+ width: 25px;
+ height: 60px ;
+ float: left;
+}
+.friends {
+ float: left;
+ background: linear-gradient(-51.91deg, #e64c4c 0%, #c91c1d 30%);
+ color: #ffffff;
+ width: 153px;
+ height: 95;
+ margin-top: 1px;
+ margin-bottom: 0px;
+ padding-top: 0.1px;
+}
+#friendsTop {
+ height: 17px;
+ width: 151px;
+ margin-top: 0px;
+ margin-left: 2px;
+}
+.friends div {
+ width: 105px;
+ height: 34px;
+}
+.friendsRow {
+ float: left;
+ margin-left: 10px ;
+ margin-bottom: 5px;
+ width: 153px;
+}
+.friendsRow img {
+ width: 34px;
+ height: 34px;
+ padding-right: 1px;
+}
+.lftPanelDiscription {
+ width: 153px;
+ //height: 469px;
  
+}
+
+
+.op1 {
+    
   
+ cursor: pointer;
+ float: right;
+ width: 157px;
+ height: 40px;
+ text-align: center;
+ background: linear-gradient(-51.91deg, #e33536 0%, #c91c1d 100%, #e33536 100%);
+ font-size: 10pt;
+ color: #ffffff;
+ margin-top: 5px;
+ line-height: 260%;
 }
