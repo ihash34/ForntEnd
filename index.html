@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demo.com</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script src="JavaScript/dragscroll.js"></script>
   
 
@@ -14,24 +16,27 @@
 
 <body style="font-family:Helvetica, sans-serif" >
      
-        
-        <div id="navbar" class="navbar dragscroll" >
+    
+	
+        <div id="navbar" class="navbar  buttonMove" >
+         
                 <a href=#>Talent Match</a>
-                 <a href=#>Administration</a>
-                 <a href=#>Member Management</a>
-                 <a href=#>Talent</a>
-                 <a href=#>Goals</a>
-                 <a href=#>Training</a>
-                 <a href=#>Organization Chart</a>
-     </div>     
-  
+                <a href=#>Administration</a>
+                <a href=#>Member Management</a>
+                <a href=#>Talent</a>
+                <a href=#>Goals</a>
+                <a href=#>Training</a>
+                <a href=#>Organization Chart</a>
+
+        </div>     
+    
 
 <div class="container">
   
 <div class="menu">
     
   
-        <div class="nav dashboardlftPanel"  >  
+        <div class="nav dashboardlftPanel "  >  
             
             <div class="profile">
                 <img src="images/Profile.jpg" alt="Profile Picture">
@@ -75,7 +80,7 @@
                 </div>
             </div>
       
-            <div class="lftPanelDiscription" >
+            <div  id="#sidebar" class="lftPanelDiscription" >
                 <div class="op1"> My Profile </div>
                 <div class="op1"> My PSP </div>
                 <div class="op1"> My PDP</div>
@@ -112,6 +117,7 @@
             <a id="itab2"   title="Matrix Manager" >Matrix Manager</a>
             <a id="itab3"   title="Coach/Mentor">Coach/Mentor</a> 
             <a id="itab4"   title="All organization">All organization</a>
+            
             <span class="helpIcon">?</span>
             
           

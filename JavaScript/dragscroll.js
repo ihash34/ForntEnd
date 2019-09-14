@@ -1,13 +1,3 @@
-
-  /**
- * @fileoverview dragscroll - scroll area by dragging
- * @version 0.0.8
- * 
- * @license MIT, see http://github.com/asvd/dragscroll
- * @copyright 2015 asvd <heliosframework@gmail.com> 
- */
-
-
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(['exports'], factory);
@@ -90,3 +80,98 @@
     exports.reset = reset;
 }));
 
+
+
+    $('#right-button').click(function() {
+      var leftPos =movbutton.scrollLeft();
+      movbutton.animate({
+        scrollLeft: leftPos - 200
+      }, 800, function() {
+        debugger;
+        if ($('.movbutton').scrollLeft() <= 0) {
+          setInvisible($('.right-button'));
+        }
+      });
+    });
+
+    $('#left-button').click(function() {
+      setVisible($('.right-button'));
+      var leftPos = movbutton.scrollLeft();
+      movbutton.animate({
+        scrollLeft: leftPos + 200
+      }, 800);
+    });
+
+    $(window).resize(function() {
+      updateUI();
+    });
+ 
+//-------------------------------------------------------------------------------------------------------
+
+$(function() {
+    var print = function(msg) {
+      alert(msg);
+    };
+
+    var setInvisible = function(elem) {
+      elem.css('visibility', 'hidden');
+    };
+    var setVisible = function(elem) {
+      elem.css('visibility', 'visible');
+    };
+
+    var elem = $(".buttonMove");
+    var items = elem.children();
+
+    // Inserting Buttons
+    elem.prepend('<div id="right-button" style="visibility: hidden;">	<svg class="pn-Advancer_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M445.44 38.183L-2.53 512l447.97 473.817 85.857-81.173-409.6-433.23v81.172l409.6-433.23L445.44 38.18z"/></svg></div>');
+    elem.append('  <div id="left-button" style="visibility: hidden;"><svg class="pn-Advancer_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M105.56 985.817L553.53 512 105.56 38.183l-85.857 81.173 409.6 433.23v-81.172l-409.6 433.23 85.856 81.174z"/></svg></div>');
+
+    // Inserting Inner
+    items.wrapAll('<div id="inner" class="dragscroll" />');
+
+    // Inserting Outer
+    debugger;
+    elem.find('#inner').wrap('<div id="outer" class="dragscroll" />');
+
+    var outer = $('#outer');
+
+    var updateUI = function() {
+      var maxWidth = outer.outerWidth(true);
+      var actualWidth = 0;
+      $.each($('#inner'), function(i, item) {
+        actualWidth += $(item).outerWidth(true);
+      });
+
+      if (actualWidth <= maxWidth) {
+        setVisible($('#left-button'));
+      }
+    };
+    updateUI();
+
+
+
+    $('#right-button').click(function() {
+      var leftPos = outer.scrollLeft();
+      outer.animate({
+        scrollLeft: leftPos - 200
+      }, 800, function() {
+        debugger;
+        if ($('#outer').scrollLeft() <= 0) {
+          setInvisible($('#right-button'));
+        }
+      });
+    });
+
+    $('#left-button').click(function() {
+      setVisible($('#right-button'));
+      var leftPos = outer.scrollLeft();
+      outer.animate({
+        scrollLeft: leftPos + 200
+      }, 800);
+    });
+
+    $(window).resize(function() {
+      updateUI();
+    });
+  });

@@ -227,7 +227,6 @@ hr {
   float: left;
   margin-left: 10px ;
   margin-right: 10px ;
-  background-position-x: 150px;
 }
 .profile {
   background: linear-gradient(-51.91deg, #df1f20 100%, #c91c1d 50%);
@@ -301,7 +300,6 @@ hr {
 }
 .lftPanelDiscription {
   width: 153px;
-  height: 440px;
 }
 .op1 {
   cursor: pointer;
@@ -314,4 +312,32 @@ hr {
   color: #ffffff;
   margin-top: 5px;
   line-height: 260%;
+}
+#outer {
+  width: 85%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+#left-button {
+  float: right;
+  width: 30px;
+  text-align: center;
+}
+#right-button {
+  float: left;
+  width: 30px;
+  text-align: center;
+}
+#inner:first-child {
+  margin-left: 0;
+}
+.hide {
+  display: none;
+}
+.pn-Advancer_Icon {
+  margin: 10px;
+  width: 10px;
+  height: 30px;
+  fill: #bbb;
 }
