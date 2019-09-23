@@ -61,6 +61,14 @@ body {
   background: #ffffff;
   padding: 0px;
 }
+.tabs__content {
+  padding: 15px;
+  font-size: 0.8rem;
+  display: none;
+}
+.tabs__content--active {
+  display: block;
+}
 hr {
   display: block;
   padding: 0;
@@ -227,6 +235,7 @@ hr {
   float: left;
   margin-left: 10px ;
   margin-right: 10px ;
+  height: device-height;
 }
 .profile {
   background: linear-gradient(-51.91deg, #df1f20 100%, #c91c1d 50%);
@@ -314,7 +323,7 @@ hr {
   line-height: 260%;
 }
 #outer {
-  width: 85%;
+  width: calc(100% - 60px);
   overflow: hidden;
   white-space: nowrap;
   display: inline-block;
