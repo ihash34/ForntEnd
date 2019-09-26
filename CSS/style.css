@@ -23,7 +23,7 @@ body {
   white-space: nowrap;
   overflow-y: hidden;
   margin-top: 25px;
-  background-color: #1b1819;
+  background-color: linear-gradient(to bottom, #1b1819 0%, #1b1819 50%, #1b1819 51%, #1b1819 100%);
   height: 39px;
   vertical-align: center;
   padding-bottom: 20px;
@@ -31,14 +31,11 @@ body {
 .navbar::-webkit-scrollbar {
   height: 5px;
   display: none;
-  background-color: rgba(245, 245, 245, 0);
 }
 .navbar::-webkit-scrollbar-thumb {
-  background-color: #000000;
   max-height: 5px;
 }
 .navbar::-webkit-scrollbar-track {
-  background-color: #F5F5F5;
   height: 2px;
 }
 .navbar a:hover {
@@ -92,6 +89,7 @@ hr {
   block-size: 25px;
   display: inline-block;
   margin-top: 10px;
+  cursor: pointer;
   margin-right: 0px;
   margin-bottom: 10px;
   padding: 5px 9px 4px 9px;
@@ -238,7 +236,7 @@ hr {
   height: device-height;
 }
 .profile {
-  background: linear-gradient(-51.91deg, #df1f20 100%, #c91c1d 50%);
+  background: linear-gradient(-51.91deg, #c91c1d 100%, #c91c1d 50%);
   width: 153px;
   margin-bottom: 0px;
   padding-bottom: 0.1px;
@@ -277,7 +275,7 @@ hr {
 }
 .friends {
   float: left;
-  background: linear-gradient(-51.91deg, #e64c4c 0%, #c91c1d 30%);
+  background: linear-gradient(-51.91deg, #c91c1d 0%, #c91c1d 30%);
   color: #ffffff;
   width: 153px;
   height: 95;
@@ -316,7 +314,7 @@ hr {
   width: 157px;
   height: 40px;
   text-align: center;
-  background: linear-gradient(-51.91deg, #e33536 0%, #c91c1d 100%, #e33536 100%);
+  background: linear-gradient(-51.91deg, #c91c1d 0%, #c91c1d 100%, #c91c1d 100%);
   font-size: 10pt;
   color: #ffffff;
   margin-top: 5px;
@@ -349,4 +347,7 @@ hr {
   width: 10px;
   height: 30px;
   fill: #bbb;
+}
+.picker-wrapper .k-hsv-gradient {
+  height: 140px;
 }

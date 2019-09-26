@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demo.com</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    
+    <link rel="stylesheet/less" type="text/css" href="less/style.less" >
+    <script src="less.js"  ></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script src="JavaScript/dragscroll.js"></script>
+    
+
+    
+    
+    <link rel="stylesheet" href="KendoUI-v2016.1.112/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="KendoUI-v2016.1.112/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="KendoUI-v2016.1.112/styles/kendo.default.mobile.min.css" />
+    
+    <script src="KendoUI-v2016.1.112/js/jquery.min.js"></script>
+    <script src="KendoUI-v2016.1.112/js/kendo.all.min.js"></script>
+    
   
+        
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,7 +33,7 @@
      
     
 	
-        <div id="navbar" class="navbar  buttonMove" >
+        <div id="1navbar" class="navbar  buttonMove" >
          
                 <a href=#>Talent Match</a>
                 <a href=#>Administration</a>
@@ -127,6 +142,69 @@
         </div>
         <div class="tabs__content" data-tab="1">
             <h1>My Direct Reports </h1>
+                           
+                                <h3 class="title"><label for="picker">Choose Accent Color</label></h3>
+                                <input  id="picker" />
+                               
+                                <h3 class="title"><label for="picker">Choose Primary Color</label></h3>
+                                <input id="picker2" />
+                                <h3 class="title"><label for="picker">Choose Menu Color</label></h3>
+                                <input id="picker3" />
+                          <script>
+                          
+                                    $("#picker").kendoColorPicker({
+                                    
+                                    buttons: false,
+                                    select: preview
+                                    });
+                                    $("#picker2").kendoColorPicker({
+                                    
+                                    buttons: false,
+                                    select: preview2
+                                    });
+                                    $("#picker3").kendoColorPicker({
+                                    
+                                    buttons: false,
+                                    select: preview3
+                                    });
+
+                                    var p="#1d1d1d";
+                                    var a="#c91c1d";
+                                    var m="rgb(46, 46, 46)";
+                                    function preview(e) {
+                                    
+                                    less.modifyVars({
+                                        "@Accent-color": e.value,
+                                        "@primary-color": p,
+                                        "@menu-color": m
+                                        });
+                                        a=e.value;
+                                                                    
+                                    } 
+                                        
+                                    
+                                    function preview2(e) {
+                                    
+                                    less.modifyVars({
+                                        "@primary-color": e.value,
+                                        "@Accent-color": a,
+                                        "@menu-color": m
+                                        });
+                                        p=e.value;
+                                    }
+
+                                    
+                                    function preview3(e) {
+
+                                    less.modifyVars({
+                                        "@menu-color": e.value,
+                                        "@Accent-color": a,
+                                        "@primary-color": p
+                                        });
+                                            m=e.value;
+                                    }
+                          </script>                  
+      
           </div>
           <div class="tabs__content " data-tab="2">
             <h1> Matrix Manager </h1>
@@ -135,10 +213,13 @@
             <h1> Coach/Mentor </h1>
           </div>
           <div class="tabs__content" data-tab="4">
-            <h1>All organization </h1>
+            <h1>All organization </h1>           
           </div>
-    </div>
 
+
+
+    </div>
+  
 
 </body>
 

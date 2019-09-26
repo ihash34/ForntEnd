@@ -10,9 +10,9 @@ primary color  #292929
 
 */
 
-@primary-color:#161314;
+@primary-color:#1d1d1d;
 @Accent-color:#c91c1d;
-@menu-color: #1b1819;
+@menu-color: rgb(46, 46, 46);
 @button-color:#c91c1d;
 @link-color:#c91c1d;
 
@@ -26,7 +26,7 @@ primary color  #292929
 }
 
 body
-{   background :linear-gradient(0deg, lighten(@primary-color,10%) 0%,@primary-color 100% ); ;
+{   background :linear-gradient(0deg, lighten(@primary-color,20%) 50%,@primary-color 100% ); 
    
     margin: 0px;
     font-size: 12px;
@@ -34,46 +34,56 @@ body
 
 ///////////////////////////// N A V B A R ////////////////////////////////////////
 .navbar
-{  overflow: auto;
-    white-space: nowrap;
-    overflow-y: hidden; 
+{  //overflow: auto;
+   // white-space: nowrap;
+    //overflow-y: hidden; 
+
     margin-top:25px; 
-    background-color: @menu-color;
+    background:linear-gradient( to bottom,@menu-color 50%,darken(@menu-color,10%) 50%);
+    //background:linear-gradient( to bottom, @menu-color 0%,@menu-color 50%,@menu-color 51%,@menu-color 100%);
     height: 39px;
     vertical-align: center;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
    
 }
 .navbar::-webkit-scrollbar {
-   height: 5px;
+   
+   
+    height: 5px;
   display: none;
-    background-color: rgba(245, 245, 245, 0);
+    
 } 
 .navbar::-webkit-scrollbar-thumb {
-    background-color: #000000;
+
     max-height:5px;
 }
 .navbar::-webkit-scrollbar-track {
     
-    background-color: #F5F5F5;
+   
     height:2px;
 }
 .navbar  a:hover
-{    
-    background : linear-gradient(183.87deg, lighten(@Accent-color,15%) 0%, @Accent-color 100%);   
-
+{    background:linear-gradient( to bottom,@Accent-color 50%,darken(@Accent-color,10%) 50%);
+     
+    color:contrast(@menu-color,darken(@menu-color,100%),lighten(@menu-color,100%),40%);
 }
 .navbar a
  { 
     block-size: 25px;
     display: inline-block;
-    color:contrast(@menu-color,darken(@menu-color,100%),lighten(@menu-color,100%),50%);
+    color:contrast(@menu-color,darken(@menu-color,100%),lighten(@menu-color,100%),40%);
     text-align: center;
     padding-top:15px;
     padding-right: 7px;
     padding-left: 7px;
     text-decoration-line: none;
  
+    // border-right:lighten(@menu-color,8%) solid 1px;   
+    border-right:contrast(@menu-color,darken(@menu-color,50%),lighten(@menu-color,10%),30%) solid 1px;
+}
+.navbar a:last-child {
+  border-right:@menu-color;
+  
 }
 
 
@@ -136,15 +146,32 @@ hr
 
 .InnerBarTab a
 { 
-    block-size: 25px;
-    display: inline-block;
-    margin-top:10px;
-   
+  block-size: 11px;
+   display: inline-block;
+   margin-top:15px;
+   cursor: pointer;
   // border-block-start: 8px;
-    margin-right: 0px;
-    margin-bottom: 10px;
+    margin-right: 1px;
+    margin-bottom: 0px;
     padding:5px 9px 4px 9px;
     color: black;
+}
+.InnerBarTab a:hover 
+{
+    //
+  //  display: inline-block;
+   // margin-top:5px;
+   
+
+        border-bottom:@Accent-color solid 3px;
+       // border-block-start: 8px;
+        margin-right: 1px;
+        margin-bottom: 0px;
+       // font-weight: bold;
+        color: @Accent-color;
+        padding:5px 9px 4px 9px;
+
+    
 }
 .helpIcon 
 { 
@@ -167,22 +194,7 @@ hr
     text-decoration:none;
 }
 
-.InnerBarTab a:hover 
-{
-    block-size: 25px;
-    display: inline-block;
-    margin-top:10px;
-   
-        border-bottom:@Accent-color solid 6px;
-        border-block-start: 8px;
-        margin-right: 1px;
-        margin-bottom: 10px;
-        
-        color: @Accent-color;
-        padding:5px 9px 4px 9px;
 
-    
-}
 
 
 
@@ -287,7 +299,7 @@ hr
       // margin-bottom:5%;
    font-weight: 100;
    background: @Accent-color;
-   width: 150px;
+   width: 145px;
    height: 20%;
    padding-right: 50px;
    position: fixed;
@@ -309,14 +321,14 @@ hr
 }
 
 .menu .title {
-   top: 50%;
+   top: 45%;
    position: absolute;
    
    -webkit-transform: translateY(-50%);
    -ms-transform: translateY(-50%);
    transform: translateY(-50%);
    transform: rotate(270deg);
-   Right: 1px;
+   Right: -4px;
    font-weight: 800;
    font-size: 15px
 }
@@ -346,7 +358,7 @@ height: device-height;
  
 }
 .profile {
- background: linear-gradient(-51.91deg, #df1f20 100%, #c91c1d 50%);
+ background: linear-gradient(-51.91deg,@Accent-color 100%,@Accent-color 50%);
  width: 153px;
  margin-bottom: 0px;
  padding-bottom: 0.1px;
@@ -385,7 +397,7 @@ height: device-height;
 }
 .friends {
  float: left;
- background: linear-gradient(-51.91deg, #e64c4c 0%, #c91c1d 30%);
+ background: linear-gradient(-51.91deg, @Accent-color 0%, @Accent-color 30%);
  color: #ffffff;
  width: 153px;
  height: 95;
@@ -430,7 +442,7 @@ margin-left: 2px;
  width: 157px;
  height: 40px;
  text-align: center;
- background: linear-gradient(-51.91deg, #e33536 0%, #c91c1d 100%, #e33536 100%);
+ background: linear-gradient(-51.91deg, @Accent-color 0%, @Accent-color 100%, @Accent-color 100%);
  font-size: 10pt;
  color: #ffffff;
  margin-top: 5px;
@@ -438,11 +450,13 @@ margin-left: 2px;
 }
 //--------------------------------------------------------------------------------------------------------
 #outer {
-  
-    width: calc(100% - 60px);;
+ 
+    width: calc(100% - 60px);
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
+padding:0px,0px,0px,700px;
+   
   }
   
   #left-button {
@@ -456,9 +470,11 @@ margin-left: 2px;
     width: 30px;
     text-align: center;
   }
-  #inner:first-child {
-    margin-left: 0;
+  #inner:last-child {
+    border-right: none;
+    
   }
+  
   
   .hide {
     display: none;
@@ -469,4 +485,9 @@ margin-left: 2px;
     height: 30px;
     fill: #bbb;
   }
-  
+
+  //-----------  C O L O R ----- P I C K E R --------------------------------------
+
+  .picker-wrapper .k-hsv-gradient {
+    height: 140px;
+}
